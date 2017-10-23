@@ -84,3 +84,31 @@ Run the '1_install_dependencies.sh' file
 sudo ./0_install_nvidia_drivers.sh 
 ```
 
+# Build Protobuf 3
+
+Install a few dependencies.
+
+
+```
+sudo apt-get install autoconf automake libtool curl make g++ git python-dev python-setuptools unzip
+```
+
+You can save it as a script as well and run [2_build_protobuf_dep.sh](https://github.com/s3p02/building_digits_on_gcp/blob/master/2_build_protobuf_dep.sh) using 'chmod' change the permissions of this '.sh' file.
+
+```
+sudo chmod a+x 2_build_protobuf_dep.sh
+```
+Run the '2_build_protobuf_dep.sh' file
+
+```
+sudo ./2_build_protobuf_dep.sh 
+```
+
+# Install Caffe
+
+Install a few dependencies for caffe.
+
+```
+sudo apt-get install --no-install-recommends build-essential cmake git gfortran libatlas-base-dev libboost-filesystem-dev libboost-python-dev libboost-system-dev libboost-thread-dev libgflags-dev libgoogle-glog-dev libhdf5-serial-dev libleveldb-dev liblmdb-dev libopencv-dev libsnappy-dev python-all-dev python-dev python-h5py python-matplotlib python-numpy python-opencv python-pil python-pip python-pydot python-scipy python-skimage python-sklearn
+```
+
