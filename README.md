@@ -165,3 +165,45 @@ Run the '4_caffe_dependencies.sh' file
 sudo ./4_caffe_dependencies.sh 
 ```
 
+To install caffe you must export the protobuf path to your '.bashrc'.
+
+```
+echo 'export CAFFE_ROOT=~/caffe' >> ~/.bashrc
+source ~/.bashrc
+```
+Check if path has been exported.
+
+```
+echo $CAFFE_ROOT
+```
+Clone caffe.
+
+```
+git clone https://github.com/NVIDIA/caffe.git $CAFFE_ROOT -b 'caffe-0.15'
+```
+
+Install PyPI packages for caffe
+
+```
+sudo pip install -r $CAFFE_ROOT/python/requirements.txt
+```
+
+If you hit some errors about missing imports, then use this command to install the packages in order
+
+```
+cat $CAFFE_ROOT/python/requirements.txt | xargs -n1 sudo pip install
+```
+
+Build caffe
+
+```
+cd $CAFFE_ROOT
+mkdir build
+cd build
+sudo cmake ..
+sudo make -j"$(nproc)"
+sudo make install
+```
+
+
+
