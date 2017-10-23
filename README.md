@@ -206,4 +206,33 @@ sudo make install
 ```
 
 
+# Install DIGITS
 
+To install [DIGITS](https://developer.nvidia.com/digits) you must export the digits path to your '.bashrc'.
+
+```
+echo 'export DIGITS_ROOT=~/digits' >> ~/.bashrc
+source ~/.bashrc
+```
+Check if path has been exported.
+
+```
+echo $DIGITS_ROOT
+```
+Clone caffe.
+
+```
+git clone https://github.com/NVIDIA/DIGITS.git $DIGITS_ROOT
+```
+
+Install PyPI packages for DIGITS
+
+```
+sudo pip install -r $DIGITS_ROOT/requirements.txt
+```
+
+DIGITS needs to be installed to enable loading data and visualization plug-ins:
+
+```
+sudo pip install -e $DIGITS_ROOT
+```
