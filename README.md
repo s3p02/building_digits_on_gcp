@@ -104,6 +104,48 @@ Run the '2_build_protobuf_dep.sh' file
 sudo ./2_build_protobuf_dep.sh 
 ```
 
+You must export the protobuf path to your '.bashrc'.
+
+```
+echo 'export PROTOBUF_ROOT=~/protobuf' >> ~/.bashrc
+source ~/.bashrc
+```
+Check if path has been exported.
+
+```
+echo $PROTOBUF_ROOT
+```
+Clone Protobuf 3.
+
+```
+git clone https://github.com/google/protobuf.git $PROTOBUF_ROOT -b '3.2.x'
+```
+
+Build Protobuf 3
+
+```
+cd $PROTOBUF_ROOT
+sudo ./autogen.sh
+sudo ./configure
+sudo make "-j$(nproc)"
+sudo make install
+sudo ldconfig
+cd python
+sudo python setup.py install --cpp_implementation
+```
+
+You can save it as a script as well and run [3_build_protobuf.sh](https://github.com/s3p02/building_digits_on_gcp/blob/master/3_build_protobuf.sh) using 'chmod' change the permissions of this '.sh' file.
+
+```
+sudo chmod a+x 3_build_protobuf.sh
+```
+Run the '3_build_protobuf.sh' file
+
+```
+sudo ./3_build_protobuf.sh 
+```
+
+
 # Install Caffe
 
 Install a few dependencies for caffe.
