@@ -154,3 +154,14 @@ Install a few dependencies for caffe.
 sudo apt-get install --no-install-recommends build-essential cmake git gfortran libatlas-base-dev libboost-filesystem-dev libboost-python-dev libboost-system-dev libboost-thread-dev libgflags-dev libgoogle-glog-dev libhdf5-serial-dev libleveldb-dev liblmdb-dev libopencv-dev libsnappy-dev python-all-dev python-dev python-h5py python-matplotlib python-numpy python-opencv python-pil python-pip python-pydot python-scipy python-skimage python-sklearn
 ```
 
+You can save it as a script as well and run [4_caffe_dependencies.sh](https://github.com/s3p02/building_digits_on_gcp/blob/master/4_caffe_dependencies.sh) using 'chmod' change the permissions of this '.sh' file.
+
+```
+sudo chmod a+x 4_caffe_dependencies.sh
+```
+Run the '4_caffe_dependencies.sh' file
+
+```
+sudo ./4_caffe_dependencies.sh 
+```
+
