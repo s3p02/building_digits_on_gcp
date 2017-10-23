@@ -11,7 +11,7 @@ lspci
   <img src="/d_0_check _for_gpu.png">
 </kbd>
 
-# Install Nvidia Drivers
+# Install Nvidia Drivers & CUDA 8
 
 Save the following code using vim or nano, name your file [0_install_nvidia_drivers.sh](https://github.com/s3p02/building_digits_on_gcp/blob/master/0_install_nvidia_drivers.sh)
 
@@ -40,6 +40,21 @@ sudo ./0_install_nvidia_drivers.sh
 ```
 The Script takes 6-8 minutes, depending on the resources alloted.
 
+You must export the cuda path to your '.bashrc'.
+
+```
+echo 'export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}' >> ~/.bashrc
+source ~/.bashrc
+```
+Check if path has been exported.
+
+```
+nvcc --version 
+```
+
+<kbd>
+  <img src="/d_2_check_cuda_path.png">
+</kbd>
 
 # Check if NVIDIA Drivers have been installed
 
