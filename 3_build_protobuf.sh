@@ -1,10 +1,10 @@
 #!/bin/bash
 
 cd $PROTOBUF_ROOT
-./autogen.sh
-./configure
-make "-j$(nproc)"
-make install
-ldconfig
+sudo ./autogen.sh
+sudo ./configure
+sudo make "-j$(nproc)"
+sudo make install
+sudo ldconfig
 cd python
-python setup.py install --cpp_implementation
+sudo python setup.py install --cpp_implementation
