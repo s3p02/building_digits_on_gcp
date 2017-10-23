@@ -67,3 +67,20 @@ sudo chmod a+x 0_install_nvidia_drivers.sh
 <kbd>
   <img src="/d_1_check_if_nvidia_driver_installed.png">
 </kbd>
+
+# Install Dependencies
+
+```
+sudo apt-get install --no-install-recommends git graphviz python-dev python-flask python-flaskext.wtf python-gevent python-h5py python-numpy python-pil python-pip python-scipy python-tk
+```
+You can save it as a script as well and run [1_install_dependencies.sh](https://github.com/s3p02/building_digits_on_gcp/blob/master/1_install_dependencies.sh) using 'chmod' change the permissions of this '.sh' file.
+
+```
+sudo chmod a+x 0_install_nvidia_drivers.sh
+```
+Run the '1_install_dependencies.sh' file
+
+```
+sudo ./0_install_nvidia_drivers.sh 
+```
+
