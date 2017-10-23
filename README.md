@@ -1,5 +1,6 @@
-# building_digits_on_gcp
+# Building from Source
 
+For building DIGITS using Docker, click [here](https://github.com/s3p02/building_digits_on_gcp_docker).
 
 # Check for Nvidia GPU
 
