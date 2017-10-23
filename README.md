@@ -13,7 +13,7 @@ lspci
 
 # Install Nvidia Drivers
 
-Save the following code using vim or nano, name your file [0_install_nvidia_drivers.sh]()
+Save the following code using vim or nano, name your file [0_install_nvidia_drivers.sh](https://github.com/s3p02/building_digits_on_gcp/blob/master/0_install_nvidia_drivers.sh)
 
 ```
 #!/bin/bash
