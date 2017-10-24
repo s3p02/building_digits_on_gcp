@@ -62,7 +62,7 @@ nvcc --version
 # Check if NVIDIA Drivers have been installed
 
 ```
-sudo chmod a+x 0_install_nvidia_drivers.sh
+nvidia-smi
 ```
 
 <kbd>
